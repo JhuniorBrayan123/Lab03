@@ -1,16 +1,23 @@
 package com.example.acurario_poo
 
 fun construirAcuario() {
-    val miAcuario = Acuario(ancho = 25, largo = 25, alto = 40)
-    miAcuario.imprimirTamano()
-    val miTorre = TanqueTorre(diametro = 25, alto = 40)
-    miTorre.imprimirTamano()
-
-
+    val acuarioSecundario = Acuario(200)
+    println("Acuario creado con constructor secundario:")
+    acuarioSecundario.mostrarDatos()
 }
 
-fun main(){
+fun crearPeces() {
+    val tiburon = Tiburon()
+    val pezPayaso = PezPayaso()
 
+    println("El tiburon es de color: ${tiburon.color}")
+    tiburon.comer()
+    println("El pez payaso es de color: ${pezPayaso.color}")
+    pezPayaso.comer()
+}
+
+fun main() {
     construirAcuario()
-
+    println("------")
+    crearPeces()
 }

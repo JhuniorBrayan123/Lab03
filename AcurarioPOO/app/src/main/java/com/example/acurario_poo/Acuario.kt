@@ -25,7 +25,11 @@ open class Acuario(open var largo: Int = 100, open var ancho: Int = 20,open var 
         set(valor) {
             alto = (valor * 1000) / (ancho * largo)
         }
-
+    fun mostrarDatos() {
+        println("Tamaño: ${largo}cm x ${ancho}cm x ${alto}cm")
+        println("Volumen: $volumen litros")
+        println("Agua disponible: $agua litros")
+    }
 
 
 
